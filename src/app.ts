@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1', router);
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Medical Server is running successfully.');
+  res.send('hotel Server is running successfully.');
 });
 
 //========> handle the router not found
