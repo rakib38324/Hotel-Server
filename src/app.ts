@@ -7,18 +7,14 @@ import cookieParser from 'cookie-parser';
 
 const app: Application = express();
 
-//--->parser
-app.use(express.json());
-app.use(
-  cors({
-    origin: 'https://atg-client-one.vercel.app',
-    credentials: true,
-  }),
-);
-
-app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(cookieParser());
+
+//--->parser
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
 
 //==========>application routes
 app.use('/api/v1', router);
